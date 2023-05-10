@@ -41,8 +41,22 @@ let courses = [
     }
 ];
 
+function findCourseByCourseId(course, courseId) {
+    let numCourses = course.length;
+function findCourseByCourseId(course, courseId) {
+    let numCourses = course.length;
+    let matching = [];
+    for (let i = 0; i < numCourses; i++){
+        if (courses[i].CourseId == courseId) {
+            matching.push(courses[i]);
+        }
+    }
+    return matching;
+}
 
-let courseCount= courses.length;
-console.log(courseCount);
+getCoursesInCourseId(courseId)
 
-
+/* When does the PROG200 course start?
+// What is the title of the PROJ500 course?
+// What are the titles of the courses that cost $50 or less?
+// What classes meet in "Classroom 1"?*/
