@@ -39,24 +39,26 @@ let courses = [
         Fee: "50.00",
 
     }
+
 ];
 
-function findCourseByCourseId(course, courseId) {
-    let numCourses = course.length;
-function findCourseByCourseId(course, courseId) {
-    let numCourses = course.length;
-    let matching = [];
-    for (let i = 0; i < numCourses; i++){
+let courseCount = courses.length;
+
+function findCoursesById(courses, courseId) {
+    for ( let i = 0; i < courseCount; i++) {
         if (courses[i].CourseId == courseId) {
-            matching.push(courses[i]);
+            return courses[i];
         }
+
     }
-    return matching;
 }
 
-getCoursesInCourseId(courseId)
 
-/* When does the PROG200 course start?
-// What is the title of the PROJ500 course?
-// What are the titles of the courses that cost $50 or less?
-// What classes meet in "Classroom 1"?*/
+
+let theCourse = findCoursesById(courses, "PROG200");
+
+
+//course PROG200 START 
+console.log(`The courseId of PROG200 starts on ${theCourse.StartDate}`)
+
+
